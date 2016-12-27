@@ -1,0 +1,117 @@
+* {
+    box-sizing: border-box;
+    position: relative;
+    width: 98%;
+}
+
+/* the star bracket is the way to say everything. By putting position: relative it will make your life easier in the future bc you wont have to remember to do this later.*/
+
+.container {
+    margin:auto;
+    width:100%;
+    padding: 1%;
+    text-align: center;
+}
+
+
+#image {
+    width: 100%;
+}
+
+
+h2 {
+    text-align: center;
+    font-family: sans-serif;
+}
+
+h5 {
+    text-align: center;
+    font-family: sans-serif;
+    margin-top:0em;
+}
+
+.row,
+.group,
+.grouped {
+    margin-left: -1em;
+    margin-right: -1em
+}
+
+/*this stuff above is for containing a collection of collumns*/
+
+
+
+
+/*after all of the content that is inside of me create this empty content that isnt there but is. forcing things to wrap down*/
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+body {
+    background:white;
+}
+
+@media (min-width:30em) {
+    .container {
+        width: 80%;
+    }
+}
+
+@media (min-width: 50em) {
+
+    .row::after,
+.group::after,
+.grouped::after,
+.clearfix::after {
+    content: '';
+    clear: both;
+    display: table;
+}
+
+    body {
+        background:white;
+    }
+    .column,
+    .columns {
+        /*this will make things a column--also having the column/columns allows you to say it either way and it will still work.*/
+        float: left;
+        padding-left: 1em;
+        padding-right: 1em;
+
+    /*make this half of what you want your gutters to be*/
+    }
+
+    /* these styles declare column widths*/
+    .one    {width: calc(100% / 12 * 01);}
+    .two    {width: calc(100% / 12 * 02);}
+    .three  {width: calc(100% / 12 * 03);}
+    .four   {width: calc(100% / 12 * 04);}
+    .five   {width: calc(100% / 12 * 05);}
+    .six    {width: calc(100% / 12 * 06);}
+    .seven  {width: calc(100% / 12 * 07);}
+    .eight  {width: calc(100% / 12 * 08);}
+    .nine   {width: calc(100% / 12 * 09);}
+    .ten    {width: calc(100% / 12 * 10);}
+    .eleven {width: calc(100% / 12 * 11);}
+    .twelve {width: calc(100% / 12 * 12);}
+
+    /* these styles declare column offests*/
+    .offset-by-one    {margin-left: calc(100% / 12 * 01);}
+    .offset-by-two    {margin-left: calc(100% / 12 * 02);}
+    .offset-by-three  {margin-left: calc(100% / 12 * 03);}
+    .offset-by-four   {margin-left: calc(100% / 12 * 04);}
+    .offset-by-five   {margin-left: calc(100% / 12 * 05);}
+    .offset-by-six    {margin-left: calc(100% / 12 * 06);}
+    .offset-by-seven  {margin-left: calc(100% / 12 * 07);}
+    .offset-by-eight  {margin-left: calc(100% / 12 * 08);}
+    .offset-by-nine   {margin-left: calc(100% / 12 * 09);}
+    .offset-by-ten    {margin-left: calc(100% / 12 * 10);}
+    .offset-by-eleven {margin-left: calc(100% / 12 * 11);}
+    .offset-by-twelve {margin-left: calc(100% / 12 * 12);}
+
+}
+
+
+
